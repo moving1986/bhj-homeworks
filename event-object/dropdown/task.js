@@ -15,8 +15,6 @@ dropdowns.forEach(dropdown => {
             dropValue.textContent = link.textContent;
             downList.classList.remove('dropdown__list_active');
         })
-
-
     });
 });
 
