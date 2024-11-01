@@ -17,10 +17,16 @@ class Game {
   }
 
   registerEvents() {
-    const inputWord = document.addEventListener('keydown', (event) => {
-        console.log(event);
+    document.addEventListener('keydown', (event) => {
+      let inputSymbol = event.key.toLocaleLowerCase();
+      let currSybmb = this.currentSymbol.textContent;
+      
+      if (inputSymbol === currSybmb) {
+          this.success(); 
+      } else {
+          this.fail();
+      }
     });
-
   }
 
   success() {
