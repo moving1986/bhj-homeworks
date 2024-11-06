@@ -1,5 +1,6 @@
 const fontSizeControl = document.querySelectorAll(".book__control_font-size");
 const book = document.querySelector(".book");
+
 const controlFontColor = document.querySelectorAll(".book__control_color");
 const controlBgColor = document.querySelectorAll(".book__control_background");
 
