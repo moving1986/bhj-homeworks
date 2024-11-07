@@ -1,7 +1,9 @@
-const searchBlock = document.querySelector(".reveal");
+const searchBlock = document.querySelectorAll(".reveal");
+
+searchBlock.forEach( element => {
 
 function inVisible(element) {
-  const { top, bottom } = searchBlock.getBoundingClientRect();
+  const { top, bottom } = element.getBoundingClientRect();
 
   if (top > window.innerHeight) {
     return false;
@@ -15,9 +17,11 @@ function inVisible(element) {
 }
 
 window.addEventListener("scroll", () => {
-    if (inVisible(searchBlock)) {
-    searchBlock.classList.add("reveal_active");
+    if (inVisible(element)) {
+      element.classList.add("reveal_active");
   } else {
-    searchBlock.classList.remove("reveal_active");
+     element.classList.remove("reveal_active");
   }
+});
+
 });
