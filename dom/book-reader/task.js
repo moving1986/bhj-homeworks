@@ -10,12 +10,13 @@ fontSizeControl.forEach((fzControl) => {
     item.addEventListener("click", (event) => {
       event.preventDefault();
 
-      item.classList.remove("font-size_active");
+      fontsSizeItem.forEach((el) => el.classList.remove("font-size_active"));
+
       book.classList.remove("font-size_small", "font-size_big");
 
       let size = "font-size_" + item.getAttribute("data-size");
 
-      item.classList.add(".font-size_active");
+      item.classList.add("font-size_active");
       book.classList.add(size);
     });
   });
